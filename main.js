@@ -47,7 +47,7 @@ function changeImage(fileName){
 
 function start() {
 	bgColor = '#ffa07a';
-	fileName = 'img/paisagem.jpg';
+	fileName = 'img/landscape.jpg';
 	changeImage(fileName);
 }
 
