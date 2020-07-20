@@ -161,3 +161,14 @@ i {
 	background-position: right top, left center, left bottom, left top, left top, right top, left center, right center, right center, left bottom;
 	z-index: 2;
 }
+
+#poster #img {
+	display: block;
+	position: absolute;
+	width: calc(var(--imgWidth) * 1px);
+	height: calc(var(--imgHeight) * 1px);
+	left: calc((var(--imgBorder) / 2) * 1px);
+	top: calc((var(--imgBorder) / 2) * 1px);
+	background: var(--imgBg) 50% 100%/contain no-repeat;
+	z-index: 1;
+}
