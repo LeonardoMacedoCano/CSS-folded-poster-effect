@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900");
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	color: #000;
+	background-color: var(--bgColor);
+	font-family: 'Roboto', sans-serif;
+}
