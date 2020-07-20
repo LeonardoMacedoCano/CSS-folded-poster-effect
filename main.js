@@ -1,5 +1,9 @@
 var
-	bgColor;
+	bgColor,
+	imgHeight,
+	imgWidth,
+	imgBorder,
+	fileName;
 
 $(document).ready(function(e){
 	var windowHeight = window.innerHeight;
@@ -24,9 +28,27 @@ function setPropertyStyle(id, valor) {
 	document.body.style.setProperty(`--${id}`, valor);
 }
 
+function changeImage(fileName){
+	var img = new Image();
+	img.src = fileName;
+
+  	img.onload = function() {
+		imgHeight = this.height;
+		imgWidth = this.width;
+		imgBorder = imgWidth / 6;
+
+		setPropertyStyle('imgBg', 'url('+fileName+')');
+		setPropertyStyle('bgColor', bgColor);
+		setPropertyStyle('imgHeight', imgHeight);
+		setPropertyStyle('imgWidth', imgWidth);
+		setPropertyStyle('imgBorder', imgBorder);
+    }
+}
+
 function start() {
 	bgColor = '#ffa07a';
-	setPropertyStyle('bgColor', bgColor);
+	fileName = 'img/paisagem.jpg';
+	changeImage(fileName);
 }
 
 start();
