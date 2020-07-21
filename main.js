@@ -24,8 +24,8 @@ $(document).ready(function(e){
 	});
 });
 
-function setPropertyStyle(id, valor) {
-	document.body.style.setProperty(`--${id}`, valor);
+function setPropertyStyle(id, value) {
+	document.body.style.setProperty(`--${id}`, value);
 }
 
 function changeImage(fileName){
