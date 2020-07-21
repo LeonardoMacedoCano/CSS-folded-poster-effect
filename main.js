@@ -1,12 +1,17 @@
 var
-	bgColor,
-	imgHeight,
-	imgWidth,
-	imgBorder,
-	fileName;
+	windowHeight = window.innerHeight;
+
+const IMG = {
+	height: 0,
+	width: 0,
+	border: 0,
+	marginTop: 0,
+	bgColor: '#ffa07a',
+	borderColor: '#ffffff',
+	bgImg: 'img/landscape.jpg',
+}
 
 $(document).ready(function(e){
-	var windowHeight = window.innerHeight;
 	$('#navigation-menu').css('height', windowHeight + 'px');
 
 	$(document).on('click', '#showMenu', function(){
@@ -29,26 +34,20 @@ function setPropertyStyle(id, value) {
 }
 
 function changeImage(fileName){
-	var img = new Image();
-	img.src = fileName;
+	var newImg = new Image();
+	newImg.src = fileName;
 
-  	img.onload = function() {
-		imgHeight = this.height;
-		imgWidth = this.width;
-		imgBorder = imgWidth / 6;
+  	newImg.onload = function() {
+		IMG.height = this.height;
+		IMG.width = this.width;
+		IMG.border = IMG.width / 6;
+		IMG.marginTop = (windowHeight - (IMG.height + IMG.border)) / 2;
+		IMG.bgImg = 'url('+fileName+')';
 
-		setPropertyStyle('imgBg', 'url('+fileName+')');
-		setPropertyStyle('bgColor', bgColor);
-		setPropertyStyle('imgHeight', imgHeight);
-		setPropertyStyle('imgWidth', imgWidth);
-		setPropertyStyle('imgBorder', imgBorder);
+		for (const key of Object.keys(IMG)) {
+		 	setPropertyStyle(`${key}`, IMG[key]);
+		}
     }
 }
 
-function start() {
-	bgColor = '#ffa07a';
-	fileName = 'img/landscape.jpg';
-	changeImage(fileName);
-}
-
-start();
+changeImage(IMG.bgImg);
