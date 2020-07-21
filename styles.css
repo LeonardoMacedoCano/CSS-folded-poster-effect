@@ -123,7 +123,7 @@ i {
 #containerPoster {
 	width: calc((var(--width) + var(--border)) * 1px);
 	height: calc((var(--height) + var(--border)) * 1px);
-	margin: calc((100vh - (var(--imgHeight) + var(--imgBorder)) * 1px) / 2) auto;
+	margin: calc(var(--marginTop) * 1px) auto;
 	display: grid;
 	justify-items: center;
 }
