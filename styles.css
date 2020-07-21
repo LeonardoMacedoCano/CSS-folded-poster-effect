@@ -121,8 +121,8 @@ i {
 }
 
 #containerPoster {
-	width: calc((var(--imgWidth) + var(--imgBorder)) * 1px);
-	height: calc((var(--imgHeight) + var(--imgBorder)) * 1px);
+	width: calc((var(--width) + var(--border)) * 1px);
+	height: calc((var(--height) + var(--border)) * 1px);
 	margin: calc((100vh - (var(--imgHeight) + var(--imgBorder)) * 1px) / 2) auto;
 	display: grid;
 	justify-items: center;
@@ -165,10 +165,10 @@ i {
 #poster #img {
 	display: block;
 	position: absolute;
-	width: calc(var(--imgWidth) * 1px);
-	height: calc(var(--imgHeight) * 1px);
-	left: calc((var(--imgBorder) / 2) * 1px);
-	top: calc((var(--imgBorder) / 2) * 1px);
-	background: var(--imgBg) 50% 100%/contain no-repeat;
+	width: calc(var(--width) * 1px);
+	height: calc(var(--height) * 1px);
+	left: calc((var(--border) / 2) * 1px);
+	top: calc((var(--border) / 2) * 1px);
+	background: var(--bgImg) 50% 100%/contain no-repeat;
 	z-index: 1;
 }
