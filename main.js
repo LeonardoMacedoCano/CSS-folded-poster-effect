@@ -33,6 +33,10 @@ function setPropertyStyle(id, value) {
 	document.body.style.setProperty(`--${id}`, value);
 }
 
+function setElementIdValue(id, value) {
+	document.getElementById(id).value = value;
+}
+
 function changeImage(fileName){
 	var newImg = new Image();
 	newImg.src = fileName;
@@ -46,6 +50,10 @@ function changeImage(fileName){
 
 		for (const key of Object.keys(IMG)) {
 		 	setPropertyStyle(`${key}`, IMG[key]);
+
+		 	if (document.getElementById(`${key}`) !== null) {
+		 		setElementIdValue(`${key}`, IMG[key]);
+		 	}
 		}
     }
 }
