@@ -131,6 +131,11 @@ i {
 	cursor: pointer;
 }
 
+.sub-item-menu input {
+	margin: auto;
+	width: 75%;
+}
+
 #containerPoster {
 	width: calc((var(--width) + var(--border)) * 1px);
 	height: calc((var(--height) + var(--border)) * 1px);
