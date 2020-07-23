@@ -62,4 +62,17 @@ function changeImage(fileName){
     }
 }
 
+function selectImage() {
+	let input = document.createElement('input');
+	input.type = 'file';
+
+	input.onchange = _ => {
+		let files = Array.from(input.files);
+		var fileName = URL.createObjectURL(event.target.files[0]);
+  		changeImage(fileName);
+	}
+
+	input.click();
+}
+
 changeImage(IMG.bgImg);
