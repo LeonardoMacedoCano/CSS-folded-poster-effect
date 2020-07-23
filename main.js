@@ -48,6 +48,10 @@ function changeImage(fileName){
 		IMG.marginTop = (windowHeight - (IMG.height + IMG.border)) / 2;
 		IMG.bgImg = 'url('+fileName+')';
 
+		if (IMG.marginTop < 20) {
+			IMG.marginTop = 20;
+		}
+
 		for (const key of Object.keys(IMG)) {
 		 	setPropertyStyle(`${key}`, IMG[key]);
 
