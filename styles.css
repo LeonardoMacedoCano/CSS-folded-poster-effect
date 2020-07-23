@@ -120,6 +120,17 @@ i {
  	background: #ed1c24;
 }
 
+.item-menu button {
+	width: 100%;
+	line-height: 60px;
+	color: #fff;
+	font-size: 18px;
+	font-family: "Roboto Slab", serif;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
 #containerPoster {
 	width: calc((var(--width) + var(--border)) * 1px);
 	height: calc((var(--height) + var(--border)) * 1px);
